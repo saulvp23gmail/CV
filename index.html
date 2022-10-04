@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<<<>>>>, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;0,700;1,100&display=swap" rel="stylesheet">
     <style>
         :root{
             --text-light-color: #ffffff;
@@ -12,12 +15,17 @@
             --text-second-dark-color:#344434;
         }
         body{
-            margin: 0px;
+            margin: 8px;
+            font-family: 'Raleway', sans-serif;
         }
         .header{
             display: grid;
-            grid-template-columns: 1fr auto;
+            overflow: hidden;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            grid-template-columns: 1fr 3fr;
             grid-template-rows: auto auto;
+            background: var(--text-main-dark-color);
         }
         .header__img{
             grid-row-start: 1;
@@ -28,11 +36,18 @@
             border-radius: 150px;
             border: 5px solid black;
         }
+        .header >p{
+            color: var(--text-light-color);
+            margin: 4px;
+        }
         .header__title{
-
+            grid-column: 2/3;
+            font-size: 2rem;
+            font-weight: bold;
         }
         .header__subtitle{
             grid-column: 2/3;
+            font-size: 1.2rem;
         }
         .section__title{
             position:sticky;
@@ -55,14 +70,18 @@
         }
         .card__title{
             grid-column: 1/3;
+            font-size: large;
+            font-weight: bold;
         }
         .card__date{
             grid-column: 1/2;
             grid-row: 2/4;
             place-self: center;
+            font-weight: bold;
         }
         .card__company{
             grid-column: 2/3;
+            font-style: italic;
         }
         .card__description{
             grid-column: 2/3;
@@ -76,8 +95,8 @@
 <body>
     <header class="header"> 
         <img src="./3x3.jpg" alt="foto" class="header__img">
-        <h1 class="header__title">Saul VILLAMIZAR</h1>
-        <h2 class="header__subtitle">Mechanical Engineer <br> MS. Energy system's optimization</h2>
+        <p class="header__title">Saul VILLAMIZAR</p>
+        <p class="header__subtitle">Mechanical Engineer <br> MS. Energy system's optimization</p>
     </header>
     <main class="main">
         <section class="minibio">
